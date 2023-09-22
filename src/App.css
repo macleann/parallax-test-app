@@ -65,6 +65,13 @@ body {
       }
     }
 
+    .flex-row {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .flex-col {
       width: 80%;
       display: flex;
@@ -83,7 +90,7 @@ body {
       }
 
       .flex-item {
-        width: 33%;
+        width: 50%;
         border: 1px solid white;
         text-align: center;
       }
@@ -98,6 +105,33 @@ body {
       .grid-item {
         border: 1px dashed cornflowerblue;
         text-align: center;
+      }
+    }
+
+    .pointless-button {
+      border: 1px solid white;
+      border-radius: 0.5em;
+      padding: 0.5em 1em;
+      background-color: transparent;
+      color: white;
+      font-size: 0.5em;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        background-color: white;
+        color: black;
+        transition: background-color 0.5s ease;
+        box-shadow: 0 0 10px black;
+      }
+
+      &:active {
+        background-color: black;
+        color: white;
+      }
+
+      &:focus {
+        outline: none;
       }
     }
 
@@ -191,11 +225,11 @@ body {
         .footer-text {
             text-align: center;
             font-size: 0.3em;
+        
+          a {
+            color: white;
+          }
         }
-
-            a {
-                color: white;
-            }
     }
   }
 }
