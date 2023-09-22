@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Parallax Demo 🌌
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project showcases a basic parallax scrolling effect built with HTML, CSS (SCSS), and JavaScript. Experience the depth effect created by different layers moving at varying speeds during scrolling.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Table of Contents 📚
+- [Features](#features-)
+- [Demo](#demo-)
+- [Tech Stack](#tech-stack-)
+- [Prerequisites](#prerequisites-)
+- [Installation](#installation-)
+- [How to Use](#how-to-use-)
+- [Project Structure](#project-structure-)
+- [Credits](#credits-)
+- [Author](#author-)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features 🌟
+- 🌈 Multi-layered parallax effect
+- 🎨 Uses CSS transformations for layers
+- 🎛 Easily customizable styles and layers with SCSS
+- 📦 No external libraries, pure vanilla CSS and JS
+- 🖲 One very pointless button just for fun!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Demo 🎥
+![Demo GIF](./public/Parallax_Demo.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Tech Stack 💻
+- HTML
+- CSS (SCSS)
+- JavaScript (React)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites 🔍
+Make sure Node.js and npm are installed on your system. If they are not, download and install them from the official Node.js website.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Installation 🛠
+1️⃣ **Clone the repository**
+```
+git clone https://github.com/macleann/parallax-test-app.git
+```
+2️⃣ **Navigate to the project folder**
+```
+cd parallax-test-app
+```
+3️⃣ **Install dependencies**
+```
+npm install
+```
+4️⃣ **Start the project**
+```
+npm start
+```
+🌐 The application will open in your browser at http://localhost:3000/.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to Use 🎮
+Scroll down to witness the parallax effect in action. Each section represents a unique "scene" with its own set of layers. Feel free to modify these scenes in App.js and App.scss.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure 🏗
+- App.js: Main React component where all sections and layers are defined.
+- App.scss: Houses SCSS styles for maintainability and readability.
+- App.css: Optional, but less DRY and not recommended.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Credits 🙏
+- Background images: [Lorem Picsum](https://picsum.photos/)
+- Fonts: [Google Fonts](https://fonts.google.com/)
+- Tutorials followed:
+    - [Simple Pure CSS Parallax Scroll Tutorial](https://www.youtube.com/watch?v=rLrLJQBG_qo) by [Developer Filip](https://www.youtube.com/@developerfilip)
+    - [This Simple Trick Makes Your Website 83% Better Looking](https://www.youtube.com/watch?v=mxHoPYFsTuk) by [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+Neil MacLean - [LinkedIn](https://www.linkedin.com/in/neil-maclean/)
