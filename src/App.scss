@@ -1,0 +1,226 @@
+// Now, Sass ain't necessary at all, but as I was doing this,
+// I realized that I could use Sass to maintain DRY-ness
+// and make the code more readable.
+// Please note that I'm not a Sass expert, so there may be
+// better ways to do this, but this is what I came up with
+// after following these tutorials:
+// https://www.youtube.com/watch?v=rLrLJQBG_qo <-- mainly this one
+// https://www.youtube.com/watch?v=mxHoPYFsTuk
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin random-background {
+  background-image: url('https://picsum.photos/1920/1080?random=#{random(1000)}');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  font-size: 4em;
+  color: white;
+  text-shadow: 0 0 10px black;
+
+  .parallax-wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 300px;
+
+    .parallax-group {
+      position: relative;
+      height: 100vh;
+      transform-style: preserve-3d;
+
+      .parallax-layer {
+        position: absolute;
+        inset: 0;
+        @include align-center;
+      }
+
+      // First define how many layers you want your parallax to have
+      // I chose to have 5 layers so I numbered them in closest to furthest order with the closest being 1
+
+      .layer-1 {
+        // Scale calculation: 1 + ((Z translate value * -1) / perspective value)
+        transform: translateZ(210px) scale(0.3);
+      }
+
+      .layer-2 {
+        transform: translateZ(120px) scale(0.6);
+      }
+      
+      .layer-3 {
+        // This is the default layer and could be omitted entirely
+        transform: translateZ(0);
+      }
+
+      .layer-4 {
+        transform: translateZ(-120px) scale(1.4);
+      }
+
+      .layer-5 {
+        transform: translateZ(-300px) scale(2);
+      }
+    }
+
+    .flex-row {
+      width: 80%;
+      @include align-center;
+    }
+
+    .flex-col {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      .flex-title {
+        width: 50%;
+        text-align: right;
+      }
+
+      .flex-subtitle {
+        width: 50%;
+        align-self: flex-end;
+        text-align: left;
+      }
+
+      .flex-item {
+        width: 50%;
+        border: 1px solid white;
+        text-align: center;
+      }
+    }
+
+    .grid {
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1em;
+
+      .grid-item {
+        border: 1px dashed cornflowerblue;
+        text-align: center;
+      }
+    }
+
+    .pointless-button {
+      border: 1px solid white;
+      border-radius: 0.5em;
+      padding: 0.5em 1em;
+      background-color: transparent;
+      color: white;
+      font-size: 0.5em;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        background-color: white;
+        color: black;
+        transition: background-color 0.5s ease;
+      }
+
+      &:active {
+        background-color: black;
+        color: white;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+
+    }
+
+    // Here we define the z-index of each section group so that they don't overlap each other
+    // Notice how the z-index alternates between 1 and 0 to accomplish this
+    // Mess around with the z-index values to see how it affects the layering of the groups
+
+    #intro {
+      z-index: 1;
+    }
+
+    // For each group, we'll need to give a background to the furthest layer to create the parallax effect
+    #intro > .layer-4 {
+      @include random-background;
+      font-size: 0.3em;
+    }
+
+    #group-1 {
+      z-index: 0;
+      // Some groups will need to be taller if the background is farther away
+      // Try removing the height property and see how Group 1 gets occluded by Group 2
+      height: 140vh;
+    }
+
+    #group-1 > .layer-5 {
+      @include random-background;
+      font-size: 0.3em;
+    }
+
+    #group-2 {
+      z-index: 1;
+    }
+
+    #group-2 > .layer-3 {
+      @include random-background;
+      font-size: 0.3em;
+    }
+
+    #group-3 {
+      z-index: 0;
+    }
+
+    #group-3 > .layer-4 {
+      @include random-background;
+      font-size: 0.3em;
+    }
+
+    #group-4 {
+      z-index: 1;
+    }
+
+    #group-4 > .layer-3 {
+      @include random-background;
+      font-size: 0.3em;
+      // Try removing the opacity and see how Layers 4 and 5 are occluded by Layer 3
+      opacity: 0.5;
+    }
+
+    #outro {
+      z-index: 0;
+      height: 200vh;
+    }
+
+    #outro > .layer-4 {
+      @include random-background;
+      font-size: 0.3em;
+    }
+
+    #footer {
+      z-index: 1;
+      position: relative;
+
+      .footer-text {
+          text-align: center;
+          font-size: 0.3em;
+
+          a {
+            color: white;
+          }
+      }
+    }
+  }
+}
