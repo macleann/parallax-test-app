@@ -50,7 +50,7 @@ git clone https://github.com/macleann/parallax-test-app.git
 ```
 2️⃣ **Navigate to the project folder**
 ```
-cd parallax-demo
+cd parallax-test-app
 ```
 3️⃣ **Install dependencies**
 ```
