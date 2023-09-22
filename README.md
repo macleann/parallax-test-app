@@ -45,21 +45,21 @@ Make sure Node.js and npm are installed on your system. If they are not, downloa
 
 ## Installation 🛠
 1️⃣ **Clone the repository**
-
+```
 git clone https://github.com/macleann/parallax-demo.git
-
+```
 2️⃣ **Navigate to the project folder**
-
+```
 cd parallax-demo
-
+```
 3️⃣ **Install dependencies**
-
+```
 npm install
-
+```
 4️⃣ **Start the project**
-
+```
 npm start
-
+```
 🌐 The application will open in your browser at http://localhost:3000/.
 
 ---
