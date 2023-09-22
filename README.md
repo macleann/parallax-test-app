@@ -46,7 +46,7 @@ Make sure Node.js and npm are installed on your system. If they are not, downloa
 ## Installation 🛠
 1️⃣ **Clone the repository**
 ```
-git clone https://github.com/macleann/parallax-demo.git
+git clone https://github.com/macleann/parallax-test-app.git
 ```
 2️⃣ **Navigate to the project folder**
 ```
